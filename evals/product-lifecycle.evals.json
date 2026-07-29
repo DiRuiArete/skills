@@ -1,0 +1,67 @@
+{
+  "skill": "product-lifecycle",
+  "version": "1.0.0",
+  "notes": "manual-trigger 语义（disable-model-invocation: true）：没有显式 /product-lifecycle 呼出时，任何自然语言都不应激活本 skill。",
+  "cases": [
+    {
+      "id": "invoke-plain",
+      "prompt": "/product-lifecycle",
+      "should_trigger": true,
+      "expected_behavior": "（若可用则先进 plan mode）精确输出 Round 1 四选项阶段自检菜单；不倾倒方法论、不列模板；输出后停等用户回答。"
+    },
+    {
+      "id": "invoke-with-context",
+      "prompt": "/product-lifecycle 我们在给养宠物的人做智能喂食器，刚立项，团队 5 个人",
+      "should_trigger": true,
+      "expected_behavior": "跳过 Round 1 等待，按 D 分支判断为 B 阶段（已立项做第一款），直接输出 0→1 动作菜单（3 选项 + ★ + X/10 + 理由）。"
+    },
+    {
+      "id": "no-auto-trigger",
+      "prompt": "帮我做一下产品定位，目标用户怎么定？",
+      "should_trigger": false,
+      "expected_behavior": "skill 不激活（disable-model-invocation）。正常回答问题即可，不输出 Round 1 菜单、不进入面试流。"
+    },
+    {
+      "id": "route-positioning",
+      "prompt": "（已呼出 /product-lifecycle 并回答 A）用户选：定位",
+      "should_trigger": true,
+      "expected_behavior": "读取 flows/strategy-positioning.md，输出其 Step 1 开场（收 2 个 1 句话信息），不展开 references/positioning.md 全文。"
+    },
+    {
+      "id": "format-contract",
+      "prompt": "（任一决策点）",
+      "should_trigger": true,
+      "expected_behavior": "恰好 3 个选项；每个带 X/10 完整度 + 1 句话理由；恰好一个 ★ 推荐；给出「我的推荐：X」；输出后停等，不自动继续。"
+    },
+    {
+      "id": "plan-mode-enter",
+      "prompt": "（非 plan mode 会话中）/product-lifecycle",
+      "should_trigger": true,
+      "expected_behavior": "先调用 EnterPlanMode 进入 plan mode，再输出 Round 1；产出累积写入 plan 文件三节结构。"
+    },
+    {
+      "id": "plan-mode-already",
+      "prompt": "（已在 plan mode 的会话中）/product-lifecycle",
+      "should_trigger": true,
+      "expected_behavior": "不重复调用 EnterPlanMode，直接输出 Round 1。"
+    },
+    {
+      "id": "state-continuity",
+      "prompt": "（定位流收尾后用户选择进品牌流）",
+      "should_trigger": true,
+      "expected_behavior": "读 plan 文件「已确认事实」，不重复问『你的产品/品类是什么、目标用户是谁』，直接以既有定位为输入开始翻译品牌三问。"
+    },
+    {
+      "id": "fact-vs-decision",
+      "prompt": "（面试中）用户：我们仓库里是不是已经有定价相关的文档了？",
+      "should_trigger": true,
+      "expected_behavior": "自己搜索用户仓库/文档回答（事实自己查），不反问用户『你有没有定价文档』；查完继续当前决策点。"
+    },
+    {
+      "id": "template-request",
+      "prompt": "（面试中）用户：直接给我复盘模板",
+      "should_trigger": true,
+      "expected_behavior": "直接读 templates/retro-template.md 内容给用户，不强迫用户先走完复盘流。"
+    }
+  ]
+}

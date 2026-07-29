@@ -1,0 +1,20 @@
+# 源资料防火墙——课程原始材料（逐字稿/文档/截图）永不入库（版权保护）
+raw/
+scratch/
+*.docx
+*.doc
+*.pdf
+*.txt
+*.png
+*.jpg
+*.jpeg
+*.webp
+INTERNAL_NOTES.md
+*.private.md
+
+# 防火墙例外：检测器的公开事实 allowlist（不是课程材料）
+!scripts/overlap-allowlist.txt
+
+# 系统与本地环境
+.DS_Store
+.claude/
