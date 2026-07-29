@@ -20,12 +20,31 @@
 
 ## 安装
 
+**Claude Code**
+
 ```bash
 git clone https://github.com/DiRuiArete/skills.git ~/dev/skills
 cd ~/dev/skills && ./install.sh
 ```
 
-装完在 Claude Code 里输入命令即可（`/product-lifecycle` 等）。卸载就删掉 `~/.claude/skills/` 里对应的软链接。
+卸载：删掉 `~/.claude/skills/` 里对应的软链接。
+
+**Codex 及其他支持 SKILL.md 的 agent**（Cursor、opencode 等）
+
+```bash
+npx skills add DiRuiArete/skills
+```
+
+按提示选择要装的 skill 和目标 agent。
+
+## 怎么用
+
+1. **呼出**：输入 skill 名，比如 `/product-thinking`。想省一步，直接带上你的处境：`/product-thinking 我在做一个给自由职业者的记账工具，不知道值不值得做`。
+2. **它先问你**：开场是一个选择题菜单（你在什么阶段 / 带着什么问题来），之后每个决策点固定三个选项，各带完整度评分和一句理由，外加一个推荐。回字母就行；选项之外有想法，直接说话。
+3. **plan mode**：在 Claude Code 里，skill 会自动进入 plan mode——整场面试只读不写，结论先累积在计划里，你确认后才落成文档。Codex 等没有 plan mode 的环境自动转为纯对话面试，规则不变。
+4. **拿产出**：每条流问到 9/10 完整度收尾，交付能直接用的东西：定位文档、复盘方案、增长作战地图。
+5. **只要模板**：不想走流程就直说，比如"给我复盘模板"，它会把模板原样给你。
+6. **语言**：面试跟随你的语言。内容底稿是中文，你用英文聊它就用英文问。
 
 ## 长什么样
 
@@ -70,4 +89,4 @@ evals/               # 每个 skill 的行为评测用例
 
 ## License
 
-[CC BY-NC-SA 4.0](LICENSE)。自己工作里用随便，把内容拿去卖不行。
+[CC BY-NC-SA 4.0](LICENSE)
