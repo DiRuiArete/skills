@@ -84,6 +84,8 @@ Each skill folder is self-contained and shares the same layout:
 
 ## Content and license
 
-These methodologies come from my study notes. Current sources: Li Xiang's product course and Liang Ning's product-thinking and growth-thinking courses (all on the Dedao app); new skills get their sources registered here. Everything is distilled from those notes and fully rewritten in my own words. No original transcripts or course images are included, and every release is checked with a verbatim-overlap detector (`scripts/check-overlap.py`). The original courses are worth buying. Takedown requests via issues will be honored.
+These methodologies come from my study notes. Current sources: Li Xiang's product course and Liang Ning's product-thinking and growth-thinking courses; new skills get their sources registered here. Everything is distilled from those notes and fully rewritten in my own words, with no original transcripts or images.
+
+The original books, videos and courses are recommended — worth studying properly. Takedown requests via issues will be honored.
 
 Licensed under [CC BY-NC-SA 4.0](LICENSE).
