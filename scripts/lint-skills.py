@@ -62,6 +62,11 @@ def main() -> int:
             errors.append(f"{name}: frontmatter name={fm.get('name')!r} 与目录名不一致")
         if fm.get("disable-model-invocation") != "true":
             errors.append(f"{name}: 缺 disable-model-invocation: true")
+        for fl in text.split("---")[1].splitlines():
+            if ":" in fl:
+                v = fl.split(":", 1)[1].strip()
+                if v and not (v.startswith('"') or v.startswith("'")) and ": " in v:
+                    errors.append(f"{name}: frontmatter 值含未加引号的英文冒号（YAML 会解析失败）: {fl.strip()[:40]}")
         if len(text) > BUDGET_SKILL:
             errors.append(f"{name}/SKILL.md: {len(text)} 字符 > {BUDGET_SKILL}")
 

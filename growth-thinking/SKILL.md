@@ -1,6 +1,6 @@
 ---
 name: growth-thinking
-description: 增长思维面试官——玩家定位、破局点、增长模式、组织诊断、借势、增长路线，主产出是增长作战地图。显式输入 /growth-thinking 使用。Growth thinking interviewer: position, breakthrough point, growth loops, leverage. Manual invoke only.
+description: "增长思维面试官——玩家定位、破局点、增长模式、组织诊断、借势、增长路线，主产出是增长作战地图。显式输入 /growth-thinking 使用。Growth thinking interviewer: position, breakthrough point, growth loops, leverage. Manual invoke only."
 version: "1.0.0"
 disable-model-invocation: true
 ---

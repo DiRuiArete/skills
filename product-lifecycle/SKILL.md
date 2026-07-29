@@ -1,6 +1,6 @@
 ---
 name: product-lifecycle
-description: 产品全周期面试官——找定位、做第一款产品、规模化，14 个动作的多轮选择题对话流。显式输入 /product-lifecycle 使用。Full product lifecycle interviewer: positioning, first product, scaling. Manual invoke only.
+description: "产品全周期面试官——找定位、做第一款产品、规模化，14 个动作的多轮选择题对话流。显式输入 /product-lifecycle 使用。Full product lifecycle interviewer: positioning, first product, scaling. Manual invoke only."
 version: "1.0.0"
 disable-model-invocation: true
 ---

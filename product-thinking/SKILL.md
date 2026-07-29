@@ -1,6 +1,6 @@
 ---
 name: product-thinking
-description: 产品思维面试官——机会判断、用户理解、体验设计、创新破局、系统能力、个人战略，6 条按动作路由的对话流。显式输入 /product-thinking 使用。Product thinking interviewer: opportunities, users, experience, innovation. Manual invoke only.
+description: "产品思维面试官——机会判断、用户理解、体验设计、创新破局、系统能力、个人战略，6 条按动作路由的对话流。显式输入 /product-thinking 使用。Product thinking interviewer: opportunities, users, experience, innovation. Manual invoke only."
 version: "1.0.0"
 disable-model-invocation: true
 ---
