@@ -3,21 +3,29 @@ Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
 
 Copyright (c) 2026 DiRuiArete
 
-本仓库全部内容（skill 指令、方法论重述、对话流、模板与图示）以
-CC BY-NC-SA 4.0 许可发布。完整法律文本（canonical legal code）：
+All content in this repository (skill instructions, methodology write-ups,
+dialogue flows, templates, diagrams) is released under CC BY-NC-SA 4.0.
+Canonical legal code:
 
-    https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.zh-hans
     https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+    https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.zh-hans
 
-许可要点（以上述法律文本为准）：
+Attribution  — credit github.com/DiRuiArete/skills.
+NonCommercial — the content itself may not be used commercially. Using these
+skills as tools in your own work is not commercial use of the content;
+selling, paywalling, or bundling the content into paid products is.
+ShareAlike  — derivative works must carry the same license.
 
-  署名（BY）    —— 使用时须注明来源仓库 github.com/DiRuiArete/skills。
-  非商业（NC）  —— 不得将本仓库内容用于商业目的。
-                   说明：个人或团队在自身工作中把这些 skills 当作
-                   工具辅助工作，不视为对本内容的商业性使用；
-                   将内容本身打包售卖、付费分发或纳入付费产品则属商业使用。
-  相同方式共享（SA）—— 演绎作品须以相同许可发布。
+The content is an original re-articulation of methodology frameworks from
+the author's study notes and contains no original course transcripts or
+images (see the readme for sources). Takedown requests from rights holders
+are honored via issues.
 
-内容来源声明：本仓库为方法论框架的二次提炼与原创改写，不含任何
-原课程逐字稿或课程配图；详见 README「内容来源与版权」一节。
-如原方法论权利方对本仓库有异议，请提 issue，将及时处理（含下架）。
+---
+
+中文说明：本仓库全部内容（skill 指令、方法论重述、对话流、模板、图示）以
+CC BY-NC-SA 4.0 发布，完整法律文本见上方链接。署名：注明来源仓库；
+非商业：内容本身不得商用——把 skill 当工具用于自身工作不属于对内容的
+商业使用，售卖、付费分发或打包进付费产品则属于；相同方式共享：演绎作品
+须以相同许可发布。内容为学习笔记的原创重述，不含任何课程原文与配图，
+来源见 README。权利方如有异议，请提 issue，将及时处理（含下架）。

@@ -35,7 +35,7 @@ cd ~/dev/skills && ./install.sh
 npx skills add DiRuiArete/skills
 ```
 
-按提示选择要装的 skill 和目标 agent。
+按提示选择要装的 skill 和目标 agent；装到用户级（而不是当前项目）加 `-g`。
 
 ## 怎么用
 

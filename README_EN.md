@@ -35,7 +35,7 @@ To uninstall, delete the symlinks in `~/.claude/skills/`.
 npx skills add DiRuiArete/skills
 ```
 
-Pick the skills and the target agent when prompted.
+Pick the skills and the target agent when prompted; add `-g` to install user-level instead of into the current project.
 
 ## How to use
 
