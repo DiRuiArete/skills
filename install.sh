@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-# 把仓库根目录下每个含 SKILL.md 的目录 symlink 到 ~/.claude/skills/，幂等可重复执行。
+# 把 skill 目录 symlink 到 ~/.claude/skills/。
+# 用法：./install.sh              安装全部
+#       ./install.sh product-thinking [其他名字…]   只装指定的
 set -euo pipefail
 
 REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -11,10 +13,23 @@ linked=0
 for d in "$REPO_DIR"/*/; do
   [ -f "$d/SKILL.md" ] || continue
   name="$(basename "$d")"
-  target="${d%/}"
-  ln -sfn "$target" "$SKILLS_DIR/$name"
-  echo "linked  $name  ->  $target"
+  if [ "$#" -gt 0 ]; then
+    case " $* " in
+      *" $name "*) ;;
+      *) continue ;;
+    esac
+  fi
+  ln -sfn "${d%/}" "$SKILLS_DIR/$name"
+  echo "linked  $name  ->  ${d%/}"
   linked=$((linked + 1))
 done
+
+if [ "$linked" -eq 0 ]; then
+  echo "no matching skills. available:"
+  for d in "$REPO_DIR"/*/; do
+    [ -f "$d/SKILL.md" ] && echo "  $(basename "$d")"
+  done
+  exit 1
+fi
 
 echo "done: $linked skill(s) linked into $SKILLS_DIR"
