@@ -1,16 +1,16 @@
 ---
 name: product-lifecycle
-description: 产品全周期面试官——找定位、做第一款产品、规模化，14 个动作的多轮选择题对话流（源自李想的产品实战方法论）。显式输入 /product-lifecycle 使用。Full product lifecycle interviewer: positioning, first product, scaling. Manual invoke only.
+description: 产品全周期面试官——找定位、做第一款产品、规模化，14 个动作的多轮选择题对话流。显式输入 /product-lifecycle 使用。Full product lifecycle interviewer: positioning, first product, scaling. Manual invoke only.
 version: "1.0.0"
 disable-model-invocation: true
 ---
 
-# 李想产品方法论 · 面试官
+# 产品全周期 · 面试官
 
 ## 第 0 步：启动
 1. **已在 plan mode** → 直接输出 Round 1。
-2. **不在 plan mode 且 EnterPlanMode 可用** → 先进 plan mode，再输出 Round 1。
-3. **无 plan mode 能力** → 声明"以纯对话模式面试"，每条流收尾时完整输出产出。
+2. **不在 plan mode** → 先调用 EnterPlanMode 进入（工具未加载就先用 ToolSearch 加载再调用），成功后输出 Round 1。不许只口头声明"已进入 plan mode"，也不许自建状态文件代替。
+3. **无 plan mode 能力**（加载与调用都不可用）→ 声明"以纯对话模式面试"，每条流收尾时完整输出产出。
 
 凡在 plan mode 运行：面试产出写进 plan 文件，维护三节「已确认事实」「流产出」「待决事项」（首次写入时创建）。
 
@@ -27,7 +27,7 @@ disable-model-invocation: true
 
 ## Round 1：阶段自检（开场精确输出这段，不扩展）
 ```
-来——李想产品 playbook。先做 30 秒阶段自检。
+来，产品全周期 playbook。先做 30 秒阶段自检。
 
 A. 还没立项 / 在选方向 / 团队还没搭好
 B. 已立项 / 在做第一款产品
@@ -76,6 +76,14 @@ plan 文件即状态库。进任何流前先读「已确认事实」——用户
 - 战略：1 有想法 · 3 粗人群 · 5 边界+差异化维度 · 7 增长论证 · 9 完整定位+品牌共识 · 10 全 5 步完
 - 0→1：3 已立项未调研 · 5 需求挖透 · 7 PEA 过+路线定 · 9 定价定+上市就绪 · 10 上市拿到份额
 - 1→10：5 第一款已上市 · 7 复盘+节奏 · 9 流程+多产品矩阵 · 10 拿到淘汰赛入场券
+
+## 交付（流收尾确认后必问一次）
+用户确认产出（≥9/10）后，问一次交付形态（菜单）：
+A. 阶段产出文档（定位一页纸 / 复盘报告 / 经营方案）
+B. PRD（背景、范围、用户故事、验收标准，可直接进开发）
+C. 开发任务清单（按里程碑拆到可执行任务，能直接交给 AI 编码执行）
+D. 只把结论存档到 plan 文件
+选定后再 ExitPlanMode，把文件写到用户指定位置（默认 docs/）。产出要落到"明天就能动手"的颗粒度。
 
 ## 模板直达
 用户点名要模板 → 直接读给他：PEA → templates/pea-template.md；复盘 → templates/retro-template.md；IPMS 流程图 → templates/ipms-flow.md；门店话术 → templates/store-script-template.md。

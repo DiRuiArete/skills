@@ -20,7 +20,7 @@ BUDGET_SKILL = 5500
 BUDGET_FLOW = 3500
 BUDGET_REF = 4500
 BUDGET_PATH_PEAK = 12000
-BANNED_STRINGS = ("lixiang", "liangning")
+BANNED_STRINGS = ("lixiang", "liangning", "李想", "梁宁", "王兴", "王慧文")
 
 
 def frontmatter(text: str) -> dict:
