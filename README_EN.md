@@ -2,7 +2,7 @@
 
 [中文](README.md) | **English**
 
-Three product methodologies I keep coming back to, packaged as interviewer-style skills. Not a knowledge base: you invoke one, it questions you step by step, and only hands over a deliverable once it has asked enough.
+Product methodologies I keep coming back to, packaged as interviewer-style skills, with more added over time. Not a knowledge base: you invoke one, it questions you step by step, and only hands over a deliverable once it has asked enough.
 
 The content is maintained in Chinese; the interviewer follows your language.
 
@@ -61,7 +61,7 @@ It:   ✅ Stage confirmed: strategy
       → My call: A
 ```
 
-Translated for illustration; the actual session runs in Chinese. The other two skills open with a single question: "What are you here with today?" They route by what you're doing, not by course chapters.
+Translated for illustration; the actual session runs in Chinese. The other skills open with a single question: "What are you here with today?" They route by what you're doing, not by course chapters.
 
 ## Repo structure
 
@@ -84,6 +84,6 @@ Each skill folder is self-contained and shares the same layout:
 
 ## Content and license
 
-These methodologies come from my study notes on Li Xiang's product course and Liang Ning's product-thinking and growth-thinking courses (all on the Dedao app). Everything here is distilled from those notes and fully rewritten in my own words. No original transcripts or course images are included, and every release is checked with a verbatim-overlap detector (`scripts/check-overlap.py`). The original courses are worth buying. Takedown requests via issues will be honored.
+These methodologies come from my study notes. Current sources: Li Xiang's product course and Liang Ning's product-thinking and growth-thinking courses (all on the Dedao app); new skills get their sources registered here. Everything is distilled from those notes and fully rewritten in my own words. No original transcripts or course images are included, and every release is checked with a verbatim-overlap detector (`scripts/check-overlap.py`). The original courses are worth buying. Takedown requests via issues will be honored.
 
 Licensed under [CC BY-NC-SA 4.0](LICENSE).
