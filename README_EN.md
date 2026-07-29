@@ -2,7 +2,7 @@
 
 [中文](README.md) | **English**
 
-Product methodologies I keep coming back to, packaged as interviewer-style skills, with more added over time. Not a knowledge base: you invoke one, it questions you step by step, and only hands over a deliverable once it has asked enough.
+Product methodologies I keep coming back to, packaged as interviewer-style skills.
 
 The content is maintained in Chinese; the interviewer follows your language.
 
@@ -14,9 +14,9 @@ The content is maintained in Chinese; the interviewer follows your language.
 
 ## Why
 
-Frameworks are easy to nod along to and impossible to recall when you actually need them. I tried feeding my course notes to an AI as a knowledge base. It just lectured back at me and never asked the questions that mattered.
+Frameworks are easy to nod along to and impossible to recall when you actually need them. So I tried feeding my course notes to an AI as a knowledge base. It just lectured back at me and never asked the questions that mattered.
 
-So these work the other way around. You invoke one, it asks where you are and what you're stuck on, then walks you through the relevant decision flow. Every decision point gives exactly three options with a recommendation, a completeness score and a one-line reason, then stops and waits for your call. Facts it can dig out of your repo, it digs out itself; decisions stay yours. You end up with a usable artifact: a positioning doc, a retro plan, a growth battle map, not a pile of advice. The interaction style borrows from mattpocock's grill-me and gstack's office-hours.
+So these work the other way around. You invoke one, it asks where you are and what you're stuck on, then walks you through the relevant decision flow. Every decision point offers options with a recommendation, a completeness score and a one-line reason, then stops and waits for you to pick or add your own. Facts it can look up, it looks up itself; decisions stay yours. You end up with something usable, such as a positioning doc, a retro plan or a growth battle map, not a pile of advice. The interaction style borrows from mattpocock's grill-me and gstack's office-hours.
 
 ## Install
 
